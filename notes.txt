@@ -1,0 +1,26 @@
+babel.config.js:
+when used nativewind: this line prevents us from boilerplate code everywhere we use to import tailwind { styled} comp
+plugins: ["nativewind/babel"]
+docs: Our babel plugin will automatically wrap your components in styled() reducing the required boilerplate.
+link: https://www.nativewind.dev/
+
+internationalization (medium)
+https://medium.com/@prathiba2796/internationalization-and-localization-in-react-native-d37c412f42f9
+
+
+internationalization:
+i removed the "react-native-localize" import * as Localization from 'react-native-localize'; as it was causing error:
+this line:  lng: Localization.getLocales()[0].languageTag, and changed to -> lng: 'en',
+error: ERROR  Invariant Violation: TurboModuleRegistry.getEnforcing(...): 'RNLocalize' could not be found. Verify that a module by this name is registered in the native binary.Bridgeless mode: false. TurboModule interop: false. Modules loaded: {"NativeModules":
+
+
+
+when facing error with i18n about pluralization:
+use in i18n.js :  compatibilityJSON: 'v3',
+Or  
+install "intl-pluralrules"
+and import in i18n.js:
+import 'intl-pluralrules';
+stackoverflow: https://stackoverflow.com/questions/70493788/i18nextpluralresolver-your-environment-seems-not-to-be-intl-api-compatible-u
+NO JUST remove the intl-pluralrules: bun remove _____
+just  compatibilityJSON: 'v3' works.
