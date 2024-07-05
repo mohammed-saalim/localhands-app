@@ -34,11 +34,11 @@ const MainPage = () => {
             "Education and Tutoring",
             "Moving and Shifting",
           ].map(category => (
-            <TouchableOpacity key={category} className="bg-custom-yellow p-4 rounded-lg mb-4" style={{ width: '48%', margin: '1%' }}>
+            <TouchableOpacity key={category} className="bg-custom-yellow p-4 rounded-lg mb-4" style={{ width: '48%', marginBottom: 10 }}>
               <Text className="text-center">{category}</Text>
             </TouchableOpacity>
           ))}
-          <TouchableOpacity className="bg-custom-yellow p-4 rounded-full self-center flex-row items-center">
+          <TouchableOpacity className="bg-custom-yellow p-4 rounded-full flex-row items-center justify-center" style={{ width: '48%' }}>
             <Text className="text-center mr-2">Show All</Text>
             <Icon name="arrow-right" size={20} color="#000" />
           </TouchableOpacity>

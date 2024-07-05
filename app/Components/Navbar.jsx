@@ -14,7 +14,7 @@ const Navbar = () => {
       >
         <Text className="px-2 text-black font-bold">Find Job</Text>
       </TouchableOpacity>
-      <Icon  name={'ampersand'} size={30} />
+      <Icon  style={{ position: 'absolute', left: '55%', transform: [{ translateX: -15 }]}} name={'ampersand'} size={30} />
       <TouchableOpacity>
         <Icon name={'account-circle'} size={30} />
       </TouchableOpacity>
