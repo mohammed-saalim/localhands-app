@@ -1,13 +1,11 @@
+// app/pages/MainPage.jsx
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import Footer from './Components/Footer';
-import Navbar from './Components/Navbar';
+import Footer from '../Components/Footer';
+import Navbar from '../Components/Navbar';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const MainPage = () => {
-  const navigation = useNavigation();
-
   return (
     <View className="flex-1 bg-white">
       <Navbar />
@@ -34,11 +32,11 @@ const MainPage = () => {
             "Education and Tutoring",
             "Moving and Shifting",
           ].map(category => (
-            <TouchableOpacity key={category} className="bg-custom-yellow p-4 rounded-lg mb-4" style={{ width: '48%', marginBottom: 10 }}>
+            <TouchableOpacity key={category} className="bg-custom-yellow p-4 rounded-lg mb-4 w-5/12 m-1">
               <Text className="text-center">{category}</Text>
             </TouchableOpacity>
           ))}
-          <TouchableOpacity className="bg-custom-yellow p-4 rounded-full flex-row items-center justify-center" style={{ width: '48%' }}>
+          <TouchableOpacity className="bg-custom-yellow p-4 rounded-full self-center flex-row items-center">
             <Text className="text-center mr-2">Show All</Text>
             <Icon name="arrow-right" size={20} color="#000" />
           </TouchableOpacity>

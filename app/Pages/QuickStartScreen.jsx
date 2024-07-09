@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { router } from 'expo-router';
 
 export default function QuickStartScreen() {
-//   const router = useRouter(); // Commented out for now
-const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <View className="flex-1 justify-center items-center bg-custom-blue">
@@ -15,13 +15,13 @@ const { t } = useTranslation();
       <Text className="text-2xl font-bold text-white mb-4">{t('quick_start')}</Text>
       <TouchableOpacity
         className="bg-custom-yellow py-4 px-8 rounded-full mb-4"
-        // onPress={() => router.push('/post-job')} // Commented out for now
+        onPress={() => router.push('Pages/MainPage') }
       >
         <Text className="text-lg font-bold">{t('post_job')}</Text>
       </TouchableOpacity>
       <TouchableOpacity
         className="bg-custom-yellow py-4 px-8 rounded-full"
-        // onPress={() => router.push('/job-list')} // Commented out for now
+        onPress={() => console.log('Navigate to Job List')}
       >
         <Text className="text-lg font-bold">{t('find_job')}</Text>
       </TouchableOpacity>
